@@ -9,7 +9,9 @@ public class Main  implements IXposedHookLoadPackage {
         if (!loadPackageParam.packageName.equals("com.zj.wuaipojie")){
             return;
         }
-        // Hook函数方法1
-        new HookFunc1().handleLoadPackage(loadPackageParam);
+        // a 普通函数 hook
+        new aFuncHook().handleLoadPackage(loadPackageParam);
+        // complexParameterFunc 复杂函数 hook
+        new complexParameterFuncHock().handleLoadPackage(loadPackageParam);
     }
 }
